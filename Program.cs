@@ -1,11 +1,5 @@
 ﻿using meetingClass;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 
 string dirName = @"C:\Users\palil\Desktop\Internship\Meeting\First.JSON";
 string command = "";

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json;
 
 namespace meetingClass
 {
@@ -30,10 +24,17 @@ namespace meetingClass
             StartDate = startDate;
             EndDate = endDate;
         }
-
         public Meeting()
         {
         }
+        /// <summary>
+        /// Function, that reads users inputs about meeting, and then ads it to the file.
+        /// After successful or unsuccessful add, you'll get confirmation message.
+        /// The file will be rewriten with new information.
+        /// </summary>
+        /// <param name="meetings">List of meetings from which we will get meetings data</param>
+        /// <param name="dirName">Directory, where the file is located</param>
+        /// <returns></returns>
         public List<Meeting> AddMeetingToFile(List<Meeting> meetings, string dirName)
         {
             Console.Clear();
@@ -109,6 +110,14 @@ namespace meetingClass
             Console.WriteLine("Meeting has been added");
             return meetings;
         }
+        /// <summary>
+        /// Function, that reads users input and deletes selected meeting from file.
+        /// After successful or unsuccessful deletion, you'll get confirmation message.
+        /// The file will be rewriten with new information.
+        /// </summary>
+        /// <param name="meetings">List of meetings from which we will get meetings data</param>
+        /// <param name="dirName">Directory, where the file is located</param>
+        /// <returns></returns>
         public List<Meeting> DeleteMeetingFromFile(List<Meeting> meetings, string dirName)
         {
             Console.Clear();
@@ -194,7 +203,14 @@ namespace meetingClass
             Console.WriteLine("Meeting has been Deleted");
             return meetings;
         }
-
+        /// <summary>
+        /// Function, that reads users input of meetings name, to which person should be added and persons name, who will be added to the meeting.
+        /// The file will be rewriten with new information.
+        /// After successful or unsuccessful add, you'll get confirmation message.
+        /// </summary>
+        /// <param name="meetings">List of meetings, where person will be added</param>
+        /// <param name="dirName">Directory, where the file is located</param>
+        /// <returns></returns>
         public List<Meeting> AddPersonToMeeting(List<Meeting> meetings, string dirName)
         {
             Console.Clear();
@@ -312,6 +328,14 @@ namespace meetingClass
             Console.WriteLine("Person has been added successfully");
             return meetings;
         }
+        /// <summary>
+        /// Function, that reads users input of meetings name, from which person should be removed and persons name
+        /// The file will be rewriten with new information.
+        /// After successful or unsuccessful remove, you'll get confirmation message.
+        /// </summary>
+        /// <param name="meetings">List of meetings from which the person will be removed</param>
+        /// <param name="dirName">Directory, where the file is located</param>
+        /// <returns></returns>
         public List<Meeting> RemovePersonFromAMeeting(List<Meeting> meetings, string dirName)
         {
             Console.Clear();
@@ -380,7 +404,10 @@ namespace meetingClass
             Console.WriteLine(name + " has been Deleted from the meeting");
             return meetings;
         }
-
+        /// <summary>
+        /// Function, that prints all meetings to console terminal.
+        /// </summary>
+        /// <param name="meetings">List of meetings from which we will get meetings data</param>
         public void AllMeetingsPrint(List<Meeting> meetings)
         {
             Console.Clear();
@@ -399,6 +426,10 @@ namespace meetingClass
                 Console.WriteLine("");
             }
         }
+        /// <summary>
+        /// Function, that reads users input and prints all meetings with selected filter to console terminal.
+        /// </summary>
+        /// <param name="meetings">List of meetings from which we will get meetings data</param>
         public void AllMeetingsFilteredPrint(List<Meeting> meetings)
         {
             Console.Clear();
@@ -493,6 +524,10 @@ namespace meetingClass
                     break;
             }
         }
+        /// <summary>
+        /// Function that prints one selected meeting to console terminal
+        /// </summary>
+        /// <param name="meeting">Meeting, which will be printed to console terminal</param>
         public void OneMeetingPrint(Meeting meeting)
         {
             Console.WriteLine("Name: " + meeting.Name);

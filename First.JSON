@@ -1,7 +1,7 @@
 [{
   "Name": "Ketvirtas susitikimas",
   "ResponsiblePerson": "Petras",
-  "Description": "SIaip",
+  "Description": "Aptarimas padaryto darbo iki siol",
   "Category": "Code monkey",
   "Type": "Live",
   "Atendees": "Petras,12:30,Kapitonas,12:30,Lukas,13:30,Rokas,12:30,Povilas,13:30",
@@ -22,7 +22,7 @@
   "Description": ".Net pradiniai mokymai",
   "Category": "Code monkey",
   "Type": "In person",
-  "Atendees": "Romas,10:00",
+  "Atendees": "Romas,10:00,Igor,10:00,Rokas,15:00",
   "StartDate": "05/10/2022 10:00",
   "EndDate": "5/10/2022 13:00"
 }]
